@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/design_default_color_secondary"
+        android:text="Google ML Kit QR-COD_BARRA"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="310dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="35dp"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerCrop"
+        android:scrollbarTrackHorizontal="@drawable/common_full_open_on_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_camera"
+        app:srcCompat="@drawable/eeee" />
+
+    <TextView
+        android:id="@+id/txtresults"
+        android:layout_width="373dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="25dp"
+        android:text="Respuesta:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view" />
+
+    <TextView
+        android:id="@+id/txtScaner"
+        android:layout_width="373dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="18dp"
+        android:text="Scanear:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtresults" />
+
+    <Button
+        android:id="@+id/button_camera"
+        android:layout_width="164dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:onClick="AbrirCamara"
+        android:text="Cámara"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="174dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:onClick="ScannQRorBA"
+        android:text="Código de Barras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtScaner" />
+
+    <Button
+        android:id="@+id/btGallery"
+        android:layout_width="140dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:onClick="abrirGaleria"
+        android:text="Galería"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toEndOf="@+id/button_camera"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:onClick="ScannQRorBA"
+        android:text="Còdigo QR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/txtScaner" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
